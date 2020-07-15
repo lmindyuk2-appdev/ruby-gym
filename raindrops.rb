@@ -37,3 +37,23 @@
 
 
 p "Enter an integer"
+
+integer = gets.chomp.to_i
+s = ""
+if integer % 3 == 0
+  s = "Pling"
+end
+if integer % 5 == 0
+  s = s + "Plang"
+end
+if integer % 7 ==0
+  s = s + "Plong"
+end
+if ((integer % 3 != 0) & (integer % 5 != 0) & (integer % 7 != 0))
+  s = integer
+end
+p s
+
+# If the number has 5 as a factor, output 'Plang'.
+# If the number has 7 as a factor, output 'Plong'.
+# If the number does not have 3, 5, or 7 as a factor, just pass the number's digits straight through.

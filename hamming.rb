@@ -38,3 +38,23 @@
 
 #   p dna.distance_between(other_dna) # => 1
 
+class Dna
+  attr_accessor :strand
+  def distance_between(other_dna)
+    distance = 0
+    for i in self.strand 
+      p i
+      if self.strand[i] != other_dna.strand[i] 
+        distance = distance + 1
+      end
+    end
+    return distance
+  end
+end
+
+
+  dna = Dna.new
+  dna.strand = "G"
+  other_dna = Dna.new
+  other_dna.strand = "T"
+  p  dna.distance_between(other_dna)

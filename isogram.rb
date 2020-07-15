@@ -21,7 +21,14 @@
 #   String.isogram?("subdermatoglyphic") # => true
 
 class String
+  attr_accessor :string
   def isogram?
-    if 
+    is_isogram = false
+    if ("a".."z").all?{|c| self.string.count(c) <= 1}
+      is_isogram = true
+    end
     return is_isogram
   end
+end
+String.isogram?("eleven") # => false
+String.isogram?("subdermatoglyphic") # => true

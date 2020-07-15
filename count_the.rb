@@ -4,6 +4,6 @@
 #   and finally prints, "'the' appeared x times", where x is an Integer
 
 p "Enter a sentence:"
-sentence = gets.chomp.downcase
+sentence = gets.chomp.gsub("-"," ").downcase
 times_appeared = sentence.scan("the").length
 p "'the' appeared #{times_appeared} times"
