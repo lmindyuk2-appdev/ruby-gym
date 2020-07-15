@@ -23,5 +23,19 @@
 #   b.body = "Complementary metal-oxide semiconductor"
 #   b.abbreviate # => "CMOS"
 
+class Phrase
+  attr_accessor :body
+
+  def abbreviate
+    return self.body.split(/ |-/).map{|i| i[0,1].upcase}.join
+
+  end
+end
+
+trial = Phrase.new
+trial.body = "Complementary metal-oxide semiconductor"
+p trial.abbreviate
+
+
 
 

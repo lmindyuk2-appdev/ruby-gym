@@ -29,3 +29,19 @@
 #     (x-j)^2 + (y-k)^2 = r^2
 
 p "Enter X,Y coordinates in the format 'X,Y'"
+coordinates = gets.chomp.split(",")
+x = coordinates[0].to_f
+y = coordinates[1].to_f
+
+distance_from_center = (x - 0)**2 + (y - 0)**2 
+if distance_from_center <= 1
+  points = 10
+elsif distance_from_center <= 25
+  points = 5
+elsif distance_from_center <= 100
+  points = 1
+else
+  points = 0
+end
+p distance_from_center
+p "#{points} points"
