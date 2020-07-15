@@ -42,11 +42,12 @@ class Dna
   attr_accessor :strand
   def distance_between(other_dna)
     distance = 0
-    for i in self.strand 
-      p i
+    i = 0
+    while i < self.strand.length
       if self.strand[i] != other_dna.strand[i] 
         distance = distance + 1
       end
+      i = i + 1
     end
     return distance
   end
